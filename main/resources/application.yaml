@@ -1,0 +1,30 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 0MB
+      max-request-size: 1MB
+      enabled: true
+      file-size-threshold: 0
+      location: D:\\temp
+      resolve-lazily: false
+  freemarker:
+    #HttpServletRequest的属性是否可以覆盖controller中的model同名项
+    allow-request-override: false
+    #HttpSession的属性是否可以覆盖controller中model的同名项
+    allow-session-override: false
+    #是否开启缓存
+    cache: false
+    #模板文件编码
+    charset: utf-8
+    #是否检查模板位置
+    check-template-location: true
+    #Contrnt-Type的值
+    content-type: text/html
+    #是否将HttpServletRequest中的属性添加到Model中
+    expose-request-attributes: false
+    #是否将HTTPSession中的属性添加到Model中
+    expose-session-attributes: false
+    #模板文件名后缀
+    suffix: .ftl
+    #模板文件位置
+    template-loader-path: classpath:/templates/
