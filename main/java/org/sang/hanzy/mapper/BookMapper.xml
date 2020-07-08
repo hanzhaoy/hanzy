@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sang.hanzy.mapper.BookMapper">
+    <insert id="addBook" parameterType="org.sang.hanzy.entity.Book">
+        INSERT INTO BOOK(name,author) values (#{name},#{author});
+    </insert>
+    <select id="getAllBook" resultType="org.sang.hanzy.entity.Book">
+        select * from book;
+    </select>
+</mapper>
+
+
