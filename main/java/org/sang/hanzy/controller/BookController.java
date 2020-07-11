@@ -39,4 +39,8 @@ public class BookController {
         System.out.println("allBook>>>"+allBook);
 
     }
+    @PostMapping("/addBook")
+    public String addBook(@RequestBody Book book){
+     return book.toString();
+    }
 }
