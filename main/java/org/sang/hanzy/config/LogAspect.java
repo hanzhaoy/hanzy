@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class LogAspect {
     //切入点
-    @Pointcut("execution(* org.sang.hanzy.*.*.*(..))")
+    @Pointcut("execution(* org.sang.hanzy.*.service.*.*(..))")
     public void pc1(){
 
     }
@@ -18,6 +18,7 @@ public class LogAspect {
     @Before(value = "pc1()")
     public void before(JoinPoint jp){
         String name = jp.getSignature().getName();
+        System.out.println("*******************START****************************");
         System.out.println(name+"方法就开始执行了。。。。。。");
     }
     //后置通知
@@ -25,6 +26,7 @@ public class LogAspect {
     public void after(JoinPoint jp){
         String name = jp.getSignature().getName();
         System.out.println(name+"方法执行结束了。。。。。。");
+        System.out.println("**********************END***************************");
     }
     //返回通知
     @AfterReturning(value = "pc1()",returning = "result")

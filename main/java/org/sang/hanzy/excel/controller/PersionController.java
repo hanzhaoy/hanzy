@@ -33,9 +33,8 @@ public class PersionController {
         persion.setHeight(172);
         persion.setWeight(150);
         int i = persionService.addPersion(persion);
-        System.out.println("addPserion"+i);
         List<PersonExportVo> allPersion = persionService.getAllPersion();
-        System.out.println(allPersion.toString());
+        System.out.println(allPersion);
 
     }
 

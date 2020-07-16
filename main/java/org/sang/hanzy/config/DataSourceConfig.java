@@ -9,17 +9,17 @@ import org.springframework.context.annotation.Primary;
 
 import javax.sql.DataSource;
 //jpa多源数据库配置
-@Configuration
-public class DataSourceConfig {
-    @Bean
-    @ConfigurationProperties("spring.datasource.one")
-    @Primary
-    DataSource dsOne(){
-        return DruidDataSourceBuilder.create().build();
-    }
-    @Bean
-    @ConfigurationProperties("spring.datasource.two")
-    DataSource dsTwo(){
-        return DruidDataSourceBuilder.create().build();
-    }
-}
+//@Configuration
+//public class DataSourceConfig {
+//    @Bean
+//    @ConfigurationProperties("spring.datasource.one")
+//    @Primary
+//    DataSource dsOne(){
+//        return DruidDataSourceBuilder.create().build();
+//    }
+//    @Bean
+//    @ConfigurationProperties("spring.datasource.two")
+//    DataSource dsTwo(){
+//        return DruidDataSourceBuilder.create().build();
+//    }
+//}

@@ -21,8 +21,8 @@ public class MyWebMvcConfig implements WebMvcConfigurer {
     //配置拦截器
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new MyInterceptor1())
+        registry.addInterceptor(new MyInterceptor())
                 .addPathPatterns("/**")
-                .excludePathPatterns("/hello");
+                .excludePathPatterns("/persion");
     }
 }

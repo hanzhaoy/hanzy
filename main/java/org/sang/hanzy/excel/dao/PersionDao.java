@@ -6,7 +6,7 @@ import org.sang.hanzy.excel.entity.PersonExportVo;
 import java.util.List;
 
 @Mapper
-public interface PersionMapper {
+public interface PersionDao {
     int addPersion(PersonExportVo persion);
     List<PersonExportVo> getAllPersion();
 }
