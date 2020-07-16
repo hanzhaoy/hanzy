@@ -13,14 +13,14 @@ public class MyFilter implements Filter {
     // 开发人员通过init方法的参数，可获得代表当前filter配置信息的FilterConfig对象
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        System.out.println("过滤器----web 应用程序启动时，web 服务器将创建Filter 的实例对象，并调用其init方法");
+        System.out.println("过滤器init----web 应用程序启动时，web 服务器将创建Filter 的实例对象，并调用其init方法");
     }
 
     //这个方法完成实际的过滤操作。当客户请求访问与过滤器关联的URL的时候，Servlet过滤器将先执行doFilter方法。
     // FilterChain参数用于访问后续过滤器。
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        System.out.println("过滤器----Web服务器每次在调用web资源的service方法之前，都会先调用一下filter的doFilter方法");
+        System.out.println("过滤器doFilter----Web服务器每次在调用web资源的service方法之前，都会先调用一下filter的doFilter方法");
         filterChain.doFilter(servletRequest,servletResponse);
     }
 
@@ -29,6 +29,6 @@ public class MyFilter implements Filter {
     // 该方法在Filter的生命周期中仅执行一次。在这个方法中，可以释放过滤器使用的资源。
     @Override
     public void destroy() {
-        System.out.println("过滤器----在Web容器卸载 Filter 对象之前被调用");
+        System.out.println("过滤器destroy----在Web容器卸载 Filter 对象之前被调用");
     }
 }
