@@ -1,4 +1,4 @@
-package org.sang.hanzy.controller;
+package org.sang.hanzy.config;
 
 import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;

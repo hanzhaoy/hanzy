@@ -1,12 +1,12 @@
 spring:
-  servlet:
-    multipart:
-      max-file-size: 0MB
-      max-request-size: 1MB
-      enabled: true
-      file-size-threshold: 0
-      location: D:\\temp
-      resolve-lazily: false
+#  servlet:
+#    multipart:
+#      max-file-size: 0MB
+#      max-request-size: 1MB
+#      enabled: true
+#      file-size-threshold: 0
+#      location: D:\\temp
+#      resolve-lazily: false
   jpa:
     properties:
       hibernate:

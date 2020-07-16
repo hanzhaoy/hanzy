@@ -1,9 +1,8 @@
-package org.sang.hanzy.service;
+package org.sang.hanzy.config;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -11,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class LogAspect {
     //切入点
-    @Pointcut("execution(* org.sang.hanzy.service.*.*(..))")
+    @Pointcut("execution(* org.sang.hanzy.*.*.*(..))")
     public void pc1(){
 
     }

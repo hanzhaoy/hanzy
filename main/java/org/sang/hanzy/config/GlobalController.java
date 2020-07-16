@@ -1,7 +1,7 @@
-package org.sang.hanzy.controller;
+package org.sang.hanzy.config;
 
-import org.sang.hanzy.entity.Author;
-import org.sang.hanzy.entity.Book;
+import org.sang.hanzy.book.entity.Book;
+import org.sang.hanzy.excel.entity.PersonExportVo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,7 +30,7 @@ public class GlobalController {
 
     @GetMapping("/book")
     @ResponseBody
-    public String book(@ModelAttribute("b") Book book,@ModelAttribute("a") Author author){
+    public String book(@ModelAttribute("b") Book book, @ModelAttribute("a") PersonExportVo author){
         return book.toString()+">>>"+ author.toString();
     }
 

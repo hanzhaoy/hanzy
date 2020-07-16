@@ -1,6 +1,6 @@
-package org.sang.hanzy.controller;
+package org.sang.hanzy.config;
 
-import org.sang.hanzy.entity.Book;
+import org.sang.hanzy.book.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;

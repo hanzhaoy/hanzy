@@ -1,6 +1,6 @@
-package org.sang.hanzy.dao;
+package org.sang.hanzy.book.dao;
 
-import org.sang.hanzy.entity.Book;
+import org.sang.hanzy.book.entity.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

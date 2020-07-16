@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sang.hanzy.excel.dao.PersionMapper">
+    <insert id="addPersion" parameterType="org.sang.hanzy.excel.entity.PersonExportVo">
+        INSERT INTO PERSION(name,sex,height,weight) values (#{name},#{sex},#{height},#{weight});
+    </insert>
+    <select id="getAllPersion" resultType="org.sang.hanzy.excel.entity.PersonExportVo">
+        select * from persion;
+    </select>
+</mapper>
+
+

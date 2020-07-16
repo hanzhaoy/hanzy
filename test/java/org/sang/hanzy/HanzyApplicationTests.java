@@ -1,12 +1,9 @@
 package org.sang.hanzy;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.aspectj.lang.annotation.Before;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.sang.hanzy.controller.BookController;
-import org.sang.hanzy.entity.Book;
-import org.sang.hanzy.service.HelloService;
+import org.sang.hanzy.book.controller.BookController;
+import org.sang.hanzy.book.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;

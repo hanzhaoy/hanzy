@@ -1,6 +1,4 @@
-package org.sang.hanzy.controller;
-
-import org.springframework.http.HttpRequest;
+package org.sang.hanzy.config;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

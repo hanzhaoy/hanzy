@@ -2,11 +2,11 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.sang.hanzy.mapper.BookMapper">
-    <insert id="addBook" parameterType="org.sang.hanzy.entity.Book">
+<mapper namespace="org.sang.hanzy.book.dao.BookMapper">
+    <insert id="addBook" parameterType="org.sang.hanzy.book.entity.Book">
         INSERT INTO BOOK(name,author) values (#{name},#{author});
     </insert>
-    <select id="getAllBook" resultType="org.sang.hanzy.entity.Book">
+    <select id="getAllBook" resultType="org.sang.hanzy.book.entity.Book">
         select * from book;
     </select>
 </mapper>
