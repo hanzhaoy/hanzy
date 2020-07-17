@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!--工厂方法模式-->
+    <className>CattleFarm</className>
+    <!--抽象工厂模式-->
+    <className>SGfarm</className>
+    <!--建造者模式-->
+    <className>ConcreteDecorator1</className>
+</config>
