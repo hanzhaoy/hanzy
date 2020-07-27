@@ -9,7 +9,7 @@ public class Main{
         char[] chars = str.toCharArray();
         StringBuffer stringBuffer = new StringBuffer("");
         for (int i = 0; i < chars.length; i++) {
-            if (!Character.isDigit(chars[i])){
+            if (!Character.isDigit(chars[i])){//不是数字
                 stringBuffer.append(chars[i]);
             }
         }
