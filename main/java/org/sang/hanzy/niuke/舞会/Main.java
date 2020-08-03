@@ -15,22 +15,24 @@ public class Main {
         String[] s = br.readLine().split(" ");
         int n = Integer.parseInt(s[0]); //男嘉宾数量
         int m = Integer.parseInt(s[1]); //女嘉宾数量
-        Map<Integer, int[]> map = new HashMap<>();
+        Map<Integer, List<Integer>> map = new HashMap<>();
         for (int i = 1; i <= n; i++) {
+            List<Integer> list = new ArrayList<>();
             String[] s1 = br.readLine().split(" ");
             rerult += s1.length - 1;
             if (s1.length > 1) {
-                int[] ints = new int[Integer.parseInt(s1[0])];
-                for (int j = 0; j < ints.length; j++) {
-                    ints[j]=Integer.parseInt(s1[j+1]);
+                //int[] ints = new int[Integer.parseInt(s1[0])];
+                for (int j = 1; j < s1.length; j++) {
+                    //ints[j]=Integer.parseInt(s1[j+1]);
+
+                    list.add(Integer.parseInt(s1[j]));
                 }
-                map.put(i, ints);
+                map.put(i, list);
             }
         }
-        System.out.println(map.toString());
         Map<Integer, List<Integer>> map1 = new HashMap<>();
-        List<Integer> list1 = new ArrayList<>();
         for (int i = 1; i <= m; i++) {
+            List<Integer> list1 = new ArrayList<>();
             String[] s2 = br.readLine().split(" ");
             rerult += s2.length - 1;
             if (s2.length > 1) {
@@ -40,15 +42,16 @@ public class Main {
                 map1.put(i, list1);
             }
         }
-//        for (int i = 1; i <= n; i++) {
-//            int[] put = map.get(i);
-//            for (int i1 = 1; i1 <= m; i1++) {
-//                List<Integer> put1 = map1.get(i1);
-//                if (put.contains(i1)&&put1.contains(i)){
-//                    rerult =rerult-1;
-//                }
-//            }
-//        }
+        //思路不对
+        for (int i = 1; i <= n; i++) {
+            List<Integer> list2 = map.get(i);
+            for (int i1 = 1; i1 <= m; i1++) {
+                List<Integer> put1 = map1.get(i1);
+                if (list2.contains(i1)&&put1.contains(i)){
+                    rerult =rerult-1;
+                }
+            }
+        }
         System.out.println(rerult);
     }
 }
