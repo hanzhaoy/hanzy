@@ -143,7 +143,7 @@ public class DateToDate {
         try {
             Date beginDate = format.parse(str[0]);
             Date endDate = format.parse(str[1]);
-            File file = new File("F:\\jinxing.txt");
+            File file = new File("D:\\jinxing.txt");
             List list = DateToDate.getDateFromFile(file);
             int days = DateToDate.getContainVacation(list, beginDate, endDate);
             System.out.println("总共的节假日包括周末：" + days);
