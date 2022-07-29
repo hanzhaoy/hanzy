@@ -5,6 +5,7 @@ import org.sang.hanzy.book.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RestController
@@ -46,4 +47,9 @@ public class BookController {
     public String addBook(@RequestBody Book book) {
         return book.toString();
     }
+
+//    @GetMapping("/exportBook")
+//    public void exportBook(HttpServletResponse response){
+//        bookService.exportBook(response);
+//    }
 }
