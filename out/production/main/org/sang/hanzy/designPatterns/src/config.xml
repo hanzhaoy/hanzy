@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!--工厂方法模式0-->
+    <className>CattleFarm</className>
+    <!--抽象工厂模式1-->
+    <className>SGfarm</className>
+    <!--建造者模式2-->
+    <className>ConcreteDecorator1</className>
+    <!--适配器模式3-->
+    <className>ElectricAdapter</className>
+    <!--桥接模式4,5-->
+    <className>Red</className>
+    <className>Wallet</className>
+</config>
